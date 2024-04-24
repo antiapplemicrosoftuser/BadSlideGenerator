@@ -40,7 +40,7 @@ def generate_slide():
 slide = generate_slide()
 
 ### 自力
-fileName = f"generateImages/" + str(datetime.datetime.now()).replace(' ', '_').replace(':', '-').replace('.', '-') + "_ver2.png"
+fileName = f"generateImages/Ver2/" + str(datetime.datetime.now()).replace(' ', '_').replace(':', '-').replace('.', '-') + "_ver2.png"
 slide.save(fileName, quality=95)
 ### 自力
 
