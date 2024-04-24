@@ -28,3 +28,10 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 ### 結果
 - 日本語と英語混在させろって
 - その他は概ねﾖｼ
+
+## Ver5
+### 要求
+- 文字列をランダムな位置・回転で置いて
+- 文章ごとにフォントを変えて
+### 結果
+**エラー出た💢💢💢💢💢💢**
