@@ -47,3 +47,8 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 ## Ver7
 ### 要求
 - 第2引数が第1引数より大きくなるように改善
+### 結果
+- なかなかいい!!!
+- 傾きが適用されてないけどこれでもよい気がする。
+- 用意した文章全部使ってる。別にこれでもいいかも。
+- 順番はシャッフルしてもいいかも
