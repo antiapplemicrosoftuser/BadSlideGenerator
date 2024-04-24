@@ -60,3 +60,10 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 ### 結果
 - 折れ線グラフにしてきた(自分は棒グラフを想定)
 - 全然余白ではない。
+
+## Ver9
+### 要求
+- グラフの種類をランダムに。
+- グラフの上に文字を描画する。
+### 結果
+- 定義されていない謎のdraw_graph関数を持ってきた。なんで???
