@@ -25,13 +25,12 @@ font_names = [
 ]
 
 # グラフの種類
-def plot_graph(draw, x_values, y_values, graph_type, width):
+def plot_graph(draw, x_values, y_values, graph_type, bar_width):
     if graph_type == 'line':
         for i in range(len(x_values) - 1):
             draw.line([(x_values[i], y_values[i]), (x_values[i+1], y_values[i+1])], fill=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), width=random.randint(1, 5))
     elif graph_type == 'bar':
-        bar_width = width / len(x_values)
-        for i, (x, y) in enumerate(zip(x_values, y_values)):
+        for x, y in zip(x_values, y_values):
             draw.rectangle([(x - bar_width / 2, 0), (x + bar_width / 2, y)], fill=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
     elif graph_type == 'scatter':
         for x, y in zip(x_values, y_values):
@@ -48,6 +47,22 @@ def generate_slide():
     # 描画オブジェクトの生成
     slide = Image.new("RGB", (width, height), bg_color)
     draw = ImageDraw.Draw(slide)
+    
+    # ランダムなグラフの個数と大きさを設定
+    num_graphs = random.randint(1, 5)
+    graph_widths = [random.randint(50, 150) for _ in range(num_graphs)]
+    graph_heights = [random.randint(50, height - 100) for _ in range(num_graphs)]
+    graph_positions = sorted(random.sample(range(50, width - 50), num_graphs))
+    
+    # グラフの描画
+    for width, height, position in zip(graph_widths, graph_heights, graph_positions):
+        x_values = np.linspace(position, position + width, 10)
+        y_values = np.random.randint(50, max(height - 50, 51), 10)
+        
+        # バーの幅をランダムに決定
+        bar_width = random.randint(5, 20)
+        
+        plot_graph(draw, x_values, y_values, 'bar', bar_width)
     
     # ランダムなフォントと位置、傾きの設定
     y_position = 50
@@ -78,29 +93,13 @@ def generate_slide():
         # 次の文章のために y_position を更新
         y_position += text_height + random.randint(10, 30)
     
-    # ランダムなグラフの個数と大きさを設定
-    num_graphs = random.randint(1, 5)
-    graph_widths = [random.randint(50, 150) for _ in range(num_graphs)]
-    graph_heights = [random.randint(50, height - 100) for _ in range(num_graphs)]
-    graph_positions = sorted(random.sample(range(50, width - 50), num_graphs))
-    
-    # ランダムなグラフの種類を選択
-    graph_types = random.choices(['line', 'bar', 'scatter'], k=num_graphs)
-    
-    # グラフの描画
-    for width, height, position, graph_type in zip(graph_widths, graph_heights, graph_positions, graph_types):
-        x_values = np.linspace(position, position + width, 10)
-        ### 自力
-        y_values = np.random.randint(50, max(height - 50, 51), 10)
-        plot_graph(draw, x_values, y_values, graph_type, width)
-    
     return slide
 
 # スライド生成
 slide = generate_slide()
 
 ### 自力
-fileName = f"generateImages/Ver17/" + str(datetime.datetime.now()).replace(' ', '_').replace(':', '-').replace('.', '-') + "_ver17.png"
+fileName = f"generateImages/Ver19/" + str(datetime.datetime.now()).replace(' ', '_').replace(':', '-').replace('.', '-') + "_ver19.png"
 slide.save(fileName, quality=95)
 ### 自力
 
