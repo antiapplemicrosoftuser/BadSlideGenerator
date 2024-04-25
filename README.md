@@ -92,3 +92,17 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 
 ## Ver10-1
 - 手動でVer10から修正。
+
+## Ver13
+### 要求
+- Ver10-1のプログラムを与え、そこから折れ線をカラフルにさせる。
+### 結果
+- `matplotlib.pyplot`をインポートし忘れていたので手動で追加
+- 色の選択方法が悪さしてそう
+
+## Ver14
+### 要求
+- バグの原因を指摘し改善を求める。
+### 結果
+- バグはうまく消えた
+- グラフが文字より上に描画されてるのは改善されず。
