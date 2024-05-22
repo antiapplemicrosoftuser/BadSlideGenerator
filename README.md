@@ -379,3 +379,9 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 - 矢印の太さに応じて先端の大きさも変える。
 ### 結果
 - 変えてはいるが太い矢印の先端を大きくするのではなく、細い矢印の先端を小さくしているっぽい。
+
+## Ver47
+### 要求
+- 矢印の先端を大きくする
+### 結果
+- うまくいってる
