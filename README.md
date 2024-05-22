@@ -367,3 +367,9 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 - ランダムなオブジェクトを繋ぐように
 ### 結果
 - 要求通りよくできてます。
+
+## Ver45
+### 要求
+- 矢印の太さをランダムに
+### 結果
+- 矢印の太さは変わったけど先端の大きさはそのまま。
