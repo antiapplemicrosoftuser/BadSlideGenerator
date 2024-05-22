@@ -1,6 +1,7 @@
 # BadSlideGenerator
 WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 
+コードの保存部分のナンバリングは手動で変えています。
 ## Ver1
 最初に生成してくれたコード。いくつか自力で追記。
 
@@ -360,3 +361,9 @@ WE ALWAYS WANT BAD SLIDES (These are written based on GPT-3.5 statements)
 - 矢印同士が繋がってる (カオスには見えるけど繋がってる必要はそんなにない)
   - 矢印はオブジェクトをランダムにつないでほしい
 
+## Ver44
+### 要求
+- 矢印の色を黒色に
+- ランダムなオブジェクトを繋ぐように
+### 結果
+- 要求通りよくできてます。
